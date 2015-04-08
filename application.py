@@ -15,9 +15,9 @@ def hello_world():
 class Storage():
   def __init__(self):
     self.redis = redis.Redis(
-      host=os.getenv('REDIS_PORT_6379_TCP_ADDR', 'localhost'),
-      port=int(os.getenv('REDIS_PORT_6379_TCP_PORT', '6379')),
-      password=os.getenv('REDIS_PASSWORD', ''))
+      host=os.getenv('REDIS-FOR-PYTHON-REDIS-SAMPLE_PORT_6379_TCP_ADDR', 'localhost'),
+      port=int(os.getenv('REDIS-FOR-PYTHON-REDIS-SAMPLE_PORT_6379_TCP_PORT', '6379')),
+      password=os.getenv('REDIS-FOR-PYTHON-REDIS-SAMPLE_PASSWORD', ''))
 
   def populate(self):
     self.redis.set('score', '1234')
